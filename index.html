@@ -38,7 +38,6 @@
   color: white;
 }
 
-      
       .intro {
         padding: 20px;
         text-align: center;
@@ -110,6 +109,95 @@
       .exercise-item:hover img {
         transform: scale(1.1);
       }
+
+/* QUIZ */
+.quiz {
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 600px;
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff, #f3f3f3);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.quiz:hover {
+  transform: translateY(-5px);
+}
+
+.quiz h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+#question {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+/* OPTIONS BUTTONS */
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+#options button {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  background: #111;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#options button:hover {
+  transform: scale(1.05);
+  background: #333;
+}
+
+/* CORRECT / WRONG ANIMATION */
+.correct {
+  background: #28a745 !important;
+  transform: scale(1.08);
+  animation: pop 0.4s ease;
+}
+
+.wrong {
+  background: #dc3545 !important;
+  transform: scale(0.95);
+  animation: shake 0.4s ease;
+}
+
+/* ANIMATIONS */
+@keyframes pop {
+  0% { transform: scale(0.9); }
+  100% { transform: scale(1.08); }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* SCORE TEXT */
+#quizScore {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
 
       footer {
         text-align: center;
@@ -189,6 +277,20 @@
 .dark-mode .tip-box {
   background: linear-gradient(135deg, #333, #111);
   color: white;
+}
+
+/* DARK MODE SUPPORT */
+.dark-mode .quiz {
+  background: linear-gradient(135deg, #222, #111);
+  color: white;
+}
+
+.dark-mode #options button {
+  background: #444;
+}
+
+.dark-mode #options button:hover {
+  background: #666;
 }
     </style>
   </head>
@@ -271,6 +373,17 @@
       </div>
     </main>
 
+<!-- QUIZ -->
+<section class="quiz">
+  <h2>🧠 Fitness Quiz</h2>
+
+  <p id="question">Loading question...</p>
+
+  <div id="options"></div>
+
+  <p id="quizScore"></p>
+</section>
+
     <footer>
       Coded by <strong>Yvonne Adedeji</strong>
     </footer>
@@ -283,6 +396,125 @@
       themeToggle.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
       });
+
+/* QUIZ */
+let questions = [
+  {
+    question: "How often should you exercise?",
+    options: ["3-5 times a week", "Once a month", "Never"],
+    answer: 0
+  },
+  {
+    question: "Which is a cardio exercise?",
+    options: ["Running", "Weight lifting", "Push-ups"],
+    answer: 0
+  },
+  {
+    question: "What does exercise improve?",
+    options: ["Only appearance", "Health and mood", "Nothing"],
+    answer: 1
+  },
+  {
+    question: "Best time to stretch?",
+    options: ["Before and after workout", "Never", "Only once a year"],
+    answer: 0
+  },
+
+  // ✅ NEW QUESTIONS ADDED
+  {
+    question: "Which nutrient helps build muscle?",
+    options: ["Protein", "Sugar", "Fat only"],
+    answer: 0
+  },
+  {
+    question: "What is the main benefit of cardio exercise?",
+    options: ["Improves heart health", "Makes you taller", "Stops breathing"],
+    answer: 0
+  },
+  {
+    question: "Which exercise improves flexibility?",
+    options: ["Yoga", "Sprinting", "Bench press"],
+    answer: 0
+  },
+  {
+    question: "What should you do before exercising?",
+    options: ["Warm up", "Sleep immediately", "Eat junk food"],
+    answer: 0
+  },
+  {
+    question: "How long should beginners exercise daily?",
+    options: ["10–30 minutes", "5 hours", "No exercise needed"],
+    answer: 0
+  },
+  {
+    question: "What helps muscle recovery after workouts?",
+    options: ["Rest and sleep", "Skipping meals", "No water"],
+    answer: 0
+  },
+  {
+    question: "Which of these is strength training?",
+    options: ["Push-ups", "Walking slowly", "Watching TV"],
+    answer: 0
+  },
+  {
+    question: "Why is hydration important during exercise?",
+    options: ["Prevents dehydration", "Makes you sleepy", "Stops muscles working"],
+    answer: 0
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  let q = questions[currentQuestion];
+
+  document.getElementById("question").innerText = q.question;
+
+  let optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    let btn = document.createElement("button");
+    btn.innerText = option;
+    btn.onclick = () => checkAnswer(index);
+    optionsDiv.appendChild(btn);
+  });
+}
+
+function checkAnswer(selected) {
+  const buttons = document.querySelectorAll("#options button");
+  const correctIndex = questions[currentQuestion].answer;
+
+  buttons.forEach((btn, index) => {
+    if (index === correctIndex) {
+      btn.classList.add("correct");
+    } else if (index === selected) {
+      btn.classList.add("wrong");
+    }
+
+    btn.disabled = true;
+  });
+
+  if (selected === correctIndex) {
+    score++;
+  }
+
+  setTimeout(() => {
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+      showQuestion();
+    } else {
+      document.getElementById("question").innerText = "Quiz Completed 🎉";
+      document.getElementById("options").innerHTML = "";
+      document.getElementById("quizScore").innerText =
+        "Final Score: " + score + " / " + questions.length;
+    }
+  }, 900);
+}
+
+showQuestion();
 
       let exerciseButton = document.getElementById("exerciseButton");
 
