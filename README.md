@@ -1,9 +1,9 @@
 # exercise-landing-page
 
 ## 📌 Description
-The Exercise Landing Page is a visually engaging and responsive static web application that introduces users to the importance of physical activity and healthy living. It provides an interactive experience where users can explore different types of exercises and learn about their benefits.
+The Exercise Landing Page is a visually engaging, responsive static web application designed to promote physical activity and healthy living. It provides an interactive experience where users can explore different types of exercises, take a short fitness quiz, and receive motivational fitness tips.
 
-The page features a clean gradient design, smooth hover animations, and a light/dark mode toggle. It highlights various exercises such as Yoga, Weight Training, and Squats. Additionally, it includes simple JavaScript interactivity where users can input their name and favourite exercise to receive a personalized message.
+The page features a modern gradient design, smooth hover animations, and a light/dark mode toggle. It showcases exercises such as Yoga, Weight Training, and Squats, and includes multiple interactive JavaScript features like a quiz system, tip generator, and personalized user prompts.
 
 ## 🛠 Prerequisites
 To run and interact with this project, ensure you have:
@@ -16,13 +16,18 @@ No installation, build tools, or server setup is required since this is a static
 * 🎨 Modern gradient header design
 * 🌙 Light/Dark mode toggle
 * 🖼 Interactive exercise gallery
-* 🖱 Smooth hover animations on images
+* 🖱 Hover animations on exercise cards and images
 * 📱 Fully responsive layout (mobile & desktop)
 * 💪 Informational sections about exercise and health
-* 🏃‍♂️ Different types of exercises (Yoga, Strength, Flexibility, Balance)
-* 🔘 Interactive button for user input
-* 💬 Personalized response based on user input
-* 🔗 External link to learn more about exercise benefits
+* 🏃‍♂️ Exercise categories (Yoga, Strength Training, Flexibility, Balance)
+* 🔘 Interactive prompt button (name + favourite exercise)
+* 💬 Personalized user message based on input
+* 🧠 Interactive fitness quiz with scoring system
+* 🔄 Quiz restart functionality
+* 💡 Daily fitness tip generator
+* 📌 Click-to-select exercise highlighting
+* ⬆ Back-to-top button with smooth scrolling
+* 🔗 External link to exercise benefits (Healthline)
 * ⚡ Lightweight vanilla JavaScript interactivity
 
  ## 💻 Technologies Used
@@ -38,13 +43,16 @@ No installation required. Simply open the web application in your browser.
 
 ## 📚 Usage
 1. Open the landing page in your browser
-2. Read about the importance of exercise
-3. Explore different exercise types
-4. Scroll through the exercise gallery
+2. Read the introduction about exercise
+3. Explore exercise cards (Yoga, Weight Training, Squats)
+4. Click cards to highlight them
 5. Toggle between light and dark mode 🌙
 6. Click “Tell Me Your Favourite Exercise”
 7. Enter your name and favourite exercise
-8. Receive a personalized message 💪
+8. Take the interactive fitness quiz 🧠
+9. View your final score and restart the quiz
+10. Click “Get Tip” for a daily fitness tip 💡
+11. Use the back-to-top button ⬆ when scrolling
 
 ## 🔗 Live Demo & Repository
 Application can be viewed here: 
@@ -59,6 +67,19 @@ Exercise Landing Page
 ![Screenshot](assets/images/before/exercise-landing-page.png "Exercise Landing Page")
 
 After Design
+
+Exercise Landing Page
+![Screenshot](assets/images/after/exercise-landing-page.png "Exercise Landing Page")
+
+Exercise Landing Page - Tip and images
+![Screenshot](assets/images/after/exercise-landing-page-tip-and-images.png "Daily Tip and images")
+
+Exercise Landing Page - Quiz
+![Screenshot](assets/images/after/exercise-landing-page-quiz.png "Exercise Landing Page - Quiz")
+
+
+Exercise Landing Page - Dark Theme
+![Screenshot](assets/images/after/exercise-landing-page-dark-theme-example.png "Exercise Landing Page - Dark Theme")
 
 ## 👥 Credit
 Designed and developed by Yvonne Adedeji.
