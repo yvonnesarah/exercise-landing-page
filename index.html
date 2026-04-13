@@ -281,16 +281,45 @@
 
 /* DARK MODE SUPPORT */
 .dark-mode .quiz {
-  background: linear-gradient(135deg, #222, #111);
-  color: white;
+  background: linear-gradient(135deg, #1e1e1e, #0f0f0f);
+  color: #f5f5f5;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
+.dark-mode .quiz h2 {
+  color: #ffffff;
+}
+
+.dark-mode #question {
+  color: #e0e0e0;
+}
+
+.dark-mode #quizScore {
+  color: #ffffff;
+}
+
+/* Buttons in dark mode */
 .dark-mode #options button {
-  background: #444;
+  background: #2c2c2c;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .dark-mode #options button:hover {
-  background: #666;
+  background: #3a3a3a;
+  transform: scale(1.05);
+}
+
+/* Correct / Wrong still visible in dark mode */
+.dark-mode .correct {
+  background: #2ecc71 !important;
+  color: #000;
+}
+
+.dark-mode .wrong {
+  background: #e74c3c !important;
+  color: #fff;
 }
     </style>
   </head>
