@@ -1,9 +1,9 @@
 # exercise-landing-page
 
 ## 📌 Description
-The Exercise Landing Page is a visually engaging, responsive static web application designed to promote physical activity and healthy living. It provides an interactive experience where users can explore different types of exercises, take a short fitness quiz, and receive motivational fitness tips.
+The Exercise Landing Page is a visually engaging, responsive static web application designed to promote physical activity and healthy living. It delivers an interactive user experience where visitors can explore various exercises, take a short fitness quiz, and receive motivational tips to support a healthy lifestyle.
 
-The page features a modern gradient design, smooth hover animations, and a light/dark mode toggle. It showcases exercises such as Yoga, Weight Training, and Squats, and includes multiple interactive JavaScript features like a quiz system, tip generator, and personalized user prompts.
+The page features a clean, modern design with gradient styling, smooth hover animations, and a light/dark mode toggle. It highlights popular exercises like Yoga, Weight Training, and Squats, and includes interactive JavaScript functionality such as a quiz system, a daily tip generator, and personalized user prompts.
 
 ## 🛠 Prerequisites
 To run and interact with this project, ensure you have:
@@ -20,14 +20,8 @@ No installation, build tools, or server setup is required since this is a static
 * 📱 Fully responsive layout (mobile & desktop)
 * 💪 Informational sections about exercise and health
 * 🏃‍♂️ Exercise categories (Yoga, Strength Training, Flexibility, Balance)
-* 🔘 Interactive prompt button (name + favourite exercise)
-* 💬 Personalized user message based on input
-* 🧠 Interactive fitness quiz with scoring system
-* 🔄 Quiz restart functionality
-* 💡 Daily fitness tip generator
 * 📌 Click-to-select exercise highlighting
 * ⬆ Back-to-top button with smooth scrolling
-* 🔗 External link to exercise benefits (Healthline)
 * ⚡ Lightweight vanilla JavaScript interactivity
 
  ## 💻 Technologies Used
@@ -42,17 +36,17 @@ This project was built using:
 No installation required. Simply open the web application in your browser.
 
 ## 📚 Usage
-1. Open the landing page in your browser
-2. Read the introduction about exercise
-3. Explore exercise cards (Yoga, Weight Training, Squats)
-4. Click cards to highlight them
-5. Toggle between light and dark mode 🌙
-6. Click “Tell Me Your Favourite Exercise”
-7. Enter your name and favourite exercise
-8. Take the interactive fitness quiz 🧠
-9. View your final score and restart the quiz
-10. Click “Get Tip” for a daily fitness tip 💡
-11. Use the back-to-top button ⬆ when scrolling
+1. Open the landing page in your browser.
+2. Read the introduction about exercise.
+3. Browse exercise cards (Yoga, Weight Training, Squats).
+4. Click cards to highlight your selection.
+5. Toggle between light and dark mode 🌙.
+6. Click “Tell Me Your Favourite Exercise”.
+7. Enter your name and favourite exercise.
+8. Complete the interactive fitness quiz 🧠.
+9. View your final score and restart the quiz.
+10. Click “Get Tip” for a motivational fitness tip 💡.
+11. Use the back-to-top button ⬆ when scrolling.
 
 ## 🔗 Live Demo & Repository
 Application can be viewed here: 
@@ -80,6 +74,21 @@ Exercise Landing Page - Quiz
 
 Exercise Landing Page - Dark Theme
 ![Screenshot](assets/images/after/exercise-landing-page-dark-theme-example.png "Exercise Landing Page - Dark Theme")
+
+## 🗺️ Roadmap (Planned Features)
+To enhance the functionality and user experience of the Exercise Landing Page, the following improvements are planned:
+* 🧠 Interactive fitness quiz with scoring system ✅
+* 🔄 Quiz restart functionality ✅
+
+## 🚀 Upcoming Features
+These enhancements are designed to make the Exercise Landing Page more intuitive, visually appealing, and user-friendly:
+* 🔘 Interactive prompt button (name + favourite exercise) ✅
+* 💡 Daily fitness tip generator ✅
+* 🔗 External link to exercise benefits (Healthline) ✅
+
+## 🧠 Advanced Features (Professional Level)
+These enhancements aim to make the Exercise Landing Page more professional, and user-friendly:
+* 💬 Personalized user message based on input ✅
 
 ## 👥 Credit
 Designed and developed by Yvonne Adedeji.
