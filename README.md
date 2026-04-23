@@ -50,9 +50,8 @@ No installation required. Simply open the web application in your browser.
 
 ## 🔗 Live Demo & Repository
 Application can be viewed here: 
-* [Live](https://yvonnesarah.github.io/exercise-landing-page/)
-
-* [Repository](https://github.com/yvonnesarah/exercise-landing-page)
+* 🌐 Live: https://yvonnesarah.github.io/exercise-landing-page/
+* 💻 Repository: https://github.com/yvonnesarah/exercise-landing-page
 
 ## 🖼 Screenshot(S)
 Before Design
