@@ -89,6 +89,24 @@ These enhancements are designed to make the Exercise Landing Page more intuitive
 These enhancements aim to make the Exercise Landing Page more professional, and user-friendly:
 * 💬 Personalized user message based on input ✅
 
+## 🧠 Challenges & Learnings
+🚧 Challenges Faced
+
+1. Implementing interactive JavaScript features such as the quiz system and ensuring smooth state management across questions.
+2. Ensuring responsiveness across different screen sizes while maintaining a consistent design.
+3. Building a reliable light/dark mode toggle that updates styles dynamically.
+4. Creating smooth hover animations without impacting performance.
+5. Managing user input and validating responses in prompts and quiz interactions.
+
+📚 Key Learnings
+
+1. Improved understanding of DOM manipulation using vanilla JavaScript.
+2. Enhanced CSS skills, especially with gradients, transitions, and responsive design.
+3. Gained experience building interactive features like quizzes and dynamic content generators.
+4. Learned how to structure and organize a complete front-end project.
+5. Strengthened ability to design with a mobile-first and user-focused approach.
+6. Improved debugging and problem-solving skills when handling user interactions.
+
 ## 👥 Credit
 Designed and developed by Yvonne Adedeji.
 
